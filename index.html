@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AOS Animation Demo</title>
+  </head>
+  <body>
+    <section class="hero">
+      <h1>Scroll to<br /><span>Animate</span></h1>
+      <p>
+        A simple demo showing AOS scroll animations with alternating image
+        cards. Keep scrolling to see each card glide in.
+      </p>
+      <div class="scroll-hint">
+        <span>scroll down</span>
+        <div class="arrow"></div>
+      </div>
+    </section>
+
+    <a href="#last">Last Section</a>
+
+    <section class="intro">
+      <span class="label">About</span>
+      <h2>Why scroll animations matter</h2>
+      <p>
+        Animations triggered on scroll guide the reader's attention, giving each
+        piece of content its moment rather than overwhelming the page at once.
+      </p>
+      <p>
+        AOS (Animate On Scroll) makes this effortless - drop a single data
+        attribute onto any element and it reveals itself as the viewport reaches
+        it.
+      </p>
+      <p>
+        Below you'll see four cards. Odd-numbered cards lead with the image on
+        the <strong>left</strong>; even-numbered cards flip the image to the
+        <strong>right</strong>. Each card uses a different AOS animation so you
+        can compare the effects.
+      </p>
+    </section>
+
+    <section class="cards">
+      <div class="container">
+        <article class="card" data-aos="fade-right">
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=640&q=80"
+            alt="Mountain landscape"
+          />
+          <div>
+            <p class="tag">Animation · fade-right</p>
+            <h2>Card One - Fade Right</h2>
+            <p>
+              This card slides in from the left as you scroll down. The image
+              sits on the left, body text on the right - the default layout for
+              odd cards.
+            </p>
+            <a href="#" class="btn">Learn more</a>
+          </div>
+        </article>
+
+        <article class="card" data-aos="fade-left">
+          <img
+            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=640&q=80"
+            alt="Forest path"
+          />
+          <div>
+            <p class="tag">Animation · fade-left</p>
+            <h2>Card Two - Fade Left</h2>
+            <p>
+              Even cards flip the image to the right. This one glides in from
+              the right side of the screen, giving a pleasant alternating
+              rhythm.
+            </p>
+            <a href="#" class="btn">Learn more</a>
+          </div>
+        </article>
+
+        <article class="card" data-aos="fade-up" data-aos-duration="400">
+          <img
+            src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=640&q=80"
+            alt="Ocean waves"
+          />
+          <div>
+            <p class="tag">Animation · fade-up</p>
+            <h2>Card Three - Fade Up</h2>
+            <p>
+              A clean upward reveal - one of the most versatile AOS animations.
+              Subtle and elegant, great for content that should feel like it's
+              rising into view.
+            </p>
+            <a href="#" class="btn">Learn more</a>
+          </div>
+        </article>
+
+        <article class="card" data-aos="zoom-in" id="last">
+          <img
+            src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=640&q=80"
+            alt="Misty forest"
+          />
+          <div>
+            <p class="tag">Animation · zoom-in</p>
+            <h2>Card Four - Zoom In</h2>
+            <p>
+              The zoom-in effect adds a pop of energy for the final card. Use it
+              sparingly - it draws the eye and works best as a closer or
+              highlight.
+            </p>
+            <a href="#" class="btn">Learn more</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 200,
+        duration: 800,
+        once: true,
+      });
+    </script>
+  </body>
+</html>
